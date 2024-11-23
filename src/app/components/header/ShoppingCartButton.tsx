@@ -3,11 +3,9 @@
 import React from 'react';
 import useCartStore from '@/stores/cart';
 import { ShoppingCart } from 'lucide-react';
-import ButtonFloating from '../../../components/buttons/ButtonFloating';
+import ButtonFloating from '@/components/buttons/ButtonFloating';
 
-type Props = {};
-
-export default function ShoppingCartButton({}: Props) {
+export default function ShoppingCartButton() {
   const { cart, toggleCart } = useCartStore();
 
   return (

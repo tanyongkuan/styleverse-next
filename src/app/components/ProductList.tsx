@@ -2,9 +2,7 @@ import ProductListItem from '@/components/product/ProductListItem';
 import { Product } from '@/types';
 import React from 'react';
 
-type Props = {};
-
-export default async function ProductList({}: Props) {
+export default async function ProductList() {
   const retrieveProduct = async ({ id }: Pick<Product, 'id'>) => {
     const response = await fetch(`https://fakestoreapi.com/products/${id}`, {
       headers: {

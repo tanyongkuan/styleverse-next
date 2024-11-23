@@ -1,14 +1,12 @@
 import React from 'react';
 import ButtonFloating from '../../components/buttons/ButtonFloating';
-import { FacebookIcon, Mail, TwitterIcon } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import TextBox from './TextBox';
 import IconPlaceholder from './IconPlaceholder';
 import Button from '../../components/buttons/Button';
 import Link from 'next/link';
 
-type Props = {};
-
-export default function Footer({}: Props) {
+export default function Footer() {
   return (
     <footer>
       <div className="bg-neutral-800 text-neutral-50">
@@ -33,8 +31,9 @@ export default function Footer({}: Props) {
           </div>
           <span className="text-center text-xs">
             Your data is in the safe hands. Check out our{' '}
-            <Link href="#" className="text-indigo-500">Privacy policy</Link>
-              {' '}
+            <Link href="#" className="text-indigo-500">
+              Privacy policy
+            </Link>{' '}
             for more info.
           </span>
         </div>
