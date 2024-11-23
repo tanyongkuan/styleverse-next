@@ -31,7 +31,7 @@ export default async function page({ params }: Props) {
 
   let response;
 
-  if (response === '') {
+  if (category === '') {
     response = await fetch('https://fakestoreapi.com/products?limit=0', {
       headers: {
         'Content-Type': 'application/json'
