@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import Features from './components/Features';
 import ProductList from './components/ProductList';
 import { Suspense } from 'react';
+import ProductListSkeleton from '@/components/product/ProductListSkeleton';
 
 const featureList = [
   {
@@ -59,7 +60,7 @@ export default function Home() {
       <div className="flex w-full flex-col justify-items-start gap-12">
         <span className="text-3xl font-bold">Featured Products</span>
         <div className="grid grid-cols-1 justify-stretch gap-8 sm:grid-cols-2 sm:gap-x-4 lg:grid-cols-4">
-          <Suspense fallback={<span>Loading</span>}>
+          <Suspense fallback={<ProductListSkeleton />}>
             <ProductList />
           </Suspense>
         </div>

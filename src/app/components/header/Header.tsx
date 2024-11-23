@@ -19,17 +19,21 @@ export default function Header() {
           <Link href="/">
             <span className="cursor-pointer text-xl font-bold">StyleVerse</span>
           </Link>
-
-          {links.map((link, index) => (
-            <Link
-              href={`/category/${link}`}
-              key={index}
-              className="hidden lg:visible"
-            >
-              <span className="cursor-pointer capitalize">{link}</span>
-            </Link>
-          ))}
         </div>
+        <nav>
+          <ul className="flex items-center justify-center gap-6">
+            {links.map((link, index) => (
+              <li
+                key={index}
+                className="hidden text-black transition hover:text-gray-700 lg:block"
+              >
+                <Link href={`/category/${link}`}>
+                  <span className="cursor-pointer capitalize">{link}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
         <div className="flex items-center justify-center gap-4">
           <ButtonFloating>
             <UserRound className="h-5 w-5" />
