@@ -4,24 +4,18 @@
 
 ## Links
 
-- [Live](https://styleverse.netlify.app/ 'Live View')
+- [Live](https://styleverse-delta.vercel.app/ 'Live View')
 
 - [API](https://fakestoreapi.com/ 'Fake Store API')
 
 ## Built With
 
-<img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D"/> <img src="https://img.shields.io/badge/typescript%20-%23007ACC.svg?&style=for-the-badge&logo=typescript&logoColor=white"/>
-<br/><br/>
-[![code style: eslint](https://img.shields.io/badge/code_style-eslint-blue)](https://github.com/eslint/eslint)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-<br/><br/>
-[![Netlify Status](https://api.netlify.com/api/v1/badges/6d758f59-15ac-4593-b3c6-1c21d4a25d4f/deploy-status)](https://app.netlify.com/sites/styleverse/deploys)
+- **Next.js 15**: A React framework for server-rendered applications, optimized with Turbopack for fast builds.
+- **React 19** for building reusable, interactive UI components.
+- **TypeScript**: A strongly typed programming language that builds on JavaScript for improved type safety and developer productivity.
+- **Tailwind CSS**: A utility-first CSS framework for rapid, responsive design.
 
-<br/><br/>
-
-<!-- ## Screenshots
-
-![Home Page](https://github.com/tanyongkuan/pokemon-tinder/blob/main/public/word-dictionary.PNG?raw=true) -->
+[![Vercel Status](https://vercelbadge.vercel.app/api/tanyongkuan/styleverse)](https://vercel.com/tanyongkuan/styleverse)
 
 ## About Me
 
