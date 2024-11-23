@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1 align="center">Styleverse</h1>
 
-## Getting Started
+<p align="center">A dynamic and user-centric ecommerce platform that offers a seamless shopping experience, blending modern design with intuitive navigation. Empowering customers to discover and purchase fashionable products effortlessly, StyleVerse Ecommerce combines a visually engaging interface with secure transactions, creating a sophisticated online shopping destination.</p>
 
-First, run the development server:
+## Links
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Live](https://styleverse.netlify.app/ 'Live View')
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [API](https://fakestoreapi.com/ 'Fake Store API')
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Built With
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+<img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D"/> <img src="https://img.shields.io/badge/typescript%20-%23007ACC.svg?&style=for-the-badge&logo=typescript&logoColor=white"/>
+<br/><br/>
+[![code style: eslint](https://img.shields.io/badge/code_style-eslint-blue)](https://github.com/eslint/eslint)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+<br/><br/>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6d758f59-15ac-4593-b3c6-1c21d4a25d4f/deploy-status)](https://app.netlify.com/sites/styleverse/deploys)
 
-## Learn More
+<br/><br/>
 
-To learn more about Next.js, take a look at the following resources:
+<!-- ## Screenshots
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![Home Page](https://github.com/tanyongkuan/pokemon-tinder/blob/main/public/word-dictionary.PNG?raw=true) -->
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## About Me
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[![Netlify Status](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tanyongkuan/)

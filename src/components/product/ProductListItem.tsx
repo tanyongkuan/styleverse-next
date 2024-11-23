@@ -3,6 +3,7 @@ import { Star } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 import AddToCartButton from './AddToCartButton';
+import Image from 'next/image';
 
 type Props = {
   product: Product;
@@ -23,7 +24,13 @@ export default function ProductListItem({ product }: Props) {
         href={productLink}
         className="flex h-64 w-full cursor-pointer flex-col items-center"
       >
-        <img src={product.image} className="h-full" />
+        <Image
+          src={product.image}
+          alt={product.title}
+          width={500}
+          height={500}
+          className="h-full"
+        />
       </Link>
       <div className="flex items-end gap-2 self-stretch border-t border-neutral-200 p-2">
         <Link

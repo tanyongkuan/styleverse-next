@@ -6,12 +6,22 @@ import { Trash2, X } from 'lucide-react';
 import useCartStore from '@/stores/cart';
 import Image from 'next/image';
 import Button from '../../components/buttons/Button';
+import { initStripePayment } from '@/libs/stripe';
+import { useRouter } from 'next/navigation';
 
-type Props = {};
-
-export default function CartPopup({}: Props) {
+export default function CartPopup() {
   const { cart, showCart, toggleCart, removeFromCart } = useCartStore();
   const [total, setTotal] = useState(0);
+  const router = useRouter();
+
+  const handleExecutePayment = async () => {
+    try {
+      const result = await initStripePayment(cart);
+      router.push(result.url);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   useEffect(() => {
     let total = 0;
@@ -32,7 +42,13 @@ export default function CartPopup({}: Props) {
       </div>
       {cart.map((item) => (
         <div className="flex items-center gap-5" key={item.id}>
-          <Image src={item.image} className="h-24 w-20" alt="" />
+          <Image
+            src={item.image}
+            className="h-24 w-20"
+            alt={item.title}
+            width={100}
+            height={100}
+          />
           <div className="flex flex-col">
             <span className="text-lg font-medium">{item.title}</span>
             <p className="text-neutral-500">
@@ -41,7 +57,7 @@ export default function CartPopup({}: Props) {
                 : item.description}
             </p>
             <div className="pt-4 text-base font-semibold text-black">
-              {`${item.quantity} x $${item.price}`}
+              {`${item.quantity} x $${item.price.toLocaleString('en-US', { minimumFractionDigits: 2 })}`}
             </div>
           </div>
           <ButtonFloating
@@ -62,7 +78,7 @@ export default function CartPopup({}: Props) {
         <Button
           text="Proceed To Checkout"
           className="bg-black uppercase text-white"
-          onClick={() => {}}
+          onClick={handleExecutePayment}
         />
       ) : (
         <span className="text-sm">Your cart is empty</span>

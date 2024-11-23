@@ -17,6 +17,7 @@ const useCartStore = create<CartState>((set) => ({
     set((state) => {
       const index = state.cart.findIndex((item) => item.id === val.id);
       if (index === -1) {
+        console.log([...state.cart, { ...val, quantity }]);
         return { cart: [...state.cart, { ...val, quantity }] };
       } else {
         const updatedCart = [...state.cart];
