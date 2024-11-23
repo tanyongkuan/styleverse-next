@@ -14,7 +14,7 @@ export default function ButtonFloating({
   return (
     <div
       className={cn(
-        `h-6 w-6 cursor-pointer rounded-full p-1 hover:bg-gray-200`,
+        `h-7 w-7 cursor-pointer rounded-full p-1 hover:bg-gray-200`,
         className
       )}
       {...props}

@@ -9,6 +9,12 @@ const nextConfig: NextConfig = {
         hostname: 'fakestoreapi.com',
         port: '',
         search: ''
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.pexels.com',
+        port: '',
+        search: ''
       }
     ]
   }

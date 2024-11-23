@@ -37,7 +37,7 @@ export default function CartPopup() {
       <div className="flex justify-between">
         <span className="text-xl text-gray-500">Products in your cart</span>
         <ButtonFloating className="text-red-500 lg:hidden" onClick={toggleCart}>
-          <X />
+          <X className="h-5 w-5" />
         </ButtonFloating>
       </div>
       {cart.map((item) => (
@@ -64,7 +64,7 @@ export default function CartPopup() {
             className="text-red-500"
             onClick={() => removeFromCart(item)}
           >
-            <Trash2 />
+            <Trash2 className="h-5 w-5" />
           </ButtonFloating>
         </div>
       ))}

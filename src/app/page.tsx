@@ -59,14 +59,40 @@ export default function Home() {
       <div className="flex w-full flex-col justify-items-start gap-12">
         <span className="text-3xl font-bold">Featured Products</span>
         <div className="grid grid-cols-1 justify-stretch gap-8 sm:grid-cols-2 sm:gap-x-4 lg:grid-cols-4">
-          {/* <ProductListItem
-          v-for="featuredProduct in featuredProducts"
-          :key="featuredProduct.id"
-          :product="featuredProduct"
-        /> */}
           <Suspense fallback={<span>Loading</span>}>
             <ProductList />
           </Suspense>
+        </div>
+      </div>
+      <div className="m-2 flex w-full flex-col gap-2">
+        <div className="grid grid-cols-2 gap-2">
+          <div
+            className="flex h-96 items-center justify-center gap-2 overflow-hidden bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url('/assets/men.jpeg')` }}
+          >
+            <Link href="/category/men">
+              <Button text="Men" className="bg-white" />
+            </Link>
+          </div>
+          <div
+            className="flex h-96 items-center justify-center gap-2 overflow-hidden bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url('https://images.pexels.com/photos/2036646/pexels-photo-2036646.jpeg?auto=compress&cs=tinysrgb&w=1600')`
+            }}
+          >
+            <Link href="/category/women">
+              <Button text="Women" className="bg-white" />
+            </Link>
+          </div>
+        </div>
+
+        <div
+          className="flex h-96 items-center justify-center gap-2 overflow-hidden bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url('/assets/accessories.png')` }}
+        >
+          <Link href="/category/jewelry">
+            <Button text="Jewelry" className="bg-white" />
+          </Link>
         </div>
       </div>
     </div>

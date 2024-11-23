@@ -54,7 +54,6 @@ export default async function page({ params }: Props) {
     <div className="flex flex-col items-center gap-6 px-4 py-4 md:max-w-4xl md:py-8 lg:max-w-5xl lg:gap-y-8 lg:py-14 xl:max-w-6xl xl:gap-y-10 xl:px-0 xl:py-16">
       <div className="flex w-full justify-between">
         <span className="text-2xl font-semibold capitalize">{categoryId}</span>
-        {/* <ButtonDropdown options={filterOptions} /> */}
       </div>
       <Suspense fallback={<ProductListSkeleton />}>
         <div className="grid grid-cols-1 justify-stretch gap-8 sm:grid-cols-2 sm:gap-x-4 lg:grid-cols-4">

@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Footer from './components/Footer';
 import Header from './components/header/Header';
+import HeaderContextProvider from './components/header/HeaderContextProvider';
 
 const inter = Inter({
   subsets: ['latin']
@@ -22,10 +23,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
         <div className="flex flex-col items-center bg-neutral-50">
-          <Header></Header>
+          <HeaderContextProvider>
+            <Header />
+          </HeaderContextProvider>
           <main>{children}</main>
         </div>
-        <Footer></Footer>
+        <Footer />
       </body>
     </html>
   );

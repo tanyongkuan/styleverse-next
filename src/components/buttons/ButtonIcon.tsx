@@ -6,7 +6,7 @@ type Props = {
   className?: string;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-export default function Button({ icon, className, ...rest }: Props) {
+export default function ButtonIcon({ icon, className, ...rest }: Props) {
   return (
     <button
       type="button"
