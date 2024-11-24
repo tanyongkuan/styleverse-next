@@ -2,17 +2,11 @@
 
 import ButtonFloating from '@/components/buttons/ButtonFloating';
 import { Menu } from 'lucide-react';
-import React, { useContext } from 'react';
-import { HeaderContext } from './HeaderContextProvider';
+import React from 'react';
+import { useHeaderContext } from './HeaderContextProvider';
 
 export default function MobileMenuButton() {
-  const context = useContext(HeaderContext);
-
-  if (!context) {
-    throw new Error('HeaderContext is not defined in Header Component');
-  }
-
-  const { setMobileMenuDisplay } = context;
+  const { setMobileMenuDisplay } = useHeaderContext();
 
   return (
     <ButtonFloating

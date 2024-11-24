@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useContext } from 'react';
-import { HeaderContext } from './HeaderContextProvider';
+import React from 'react';
+import { useHeaderContext } from './HeaderContextProvider';
 import { cn } from '@/libs/util';
 import ButtonFloating from '@/components/buttons/ButtonFloating';
 import { X } from 'lucide-react';
@@ -13,13 +13,7 @@ type Props = {
 };
 
 export default function MobileMenu({ links }: Props) {
-  const context = useContext(HeaderContext);
-
-  if (!context) {
-    throw new Error('HeaderContext is not defined in Header Component');
-  }
-
-  const { mobileMenuDisplay, setMobileMenuDisplay } = context;
+  const { mobileMenuDisplay, setMobileMenuDisplay } = useHeaderContext();
 
   return (
     <>

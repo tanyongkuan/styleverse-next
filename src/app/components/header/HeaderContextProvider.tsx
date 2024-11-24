@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 type Props = {
   children: React.ReactNode;
@@ -21,4 +21,14 @@ export default function HeaderContextProvider({ children }: Props) {
       {children}
     </HeaderContext.Provider>
   );
+}
+
+export function useHeaderContext() {
+  const context = useContext(HeaderContext);
+
+  if (!context) {
+    throw new Error('HeaderContext is not defined in Header Component');
+  }
+
+  return context;
 }
